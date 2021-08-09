@@ -5,7 +5,7 @@ namespace Calculator
 {
     public class Calculator
     {
-        public static string Calculate(string mathString)
+        public string Calculate(string mathString)
         {
             List<string> mathList = StringToList(mathString);
             mathString = Solution(mathList).ToString();
@@ -13,7 +13,7 @@ namespace Calculator
         }
 
 
-        private static double Solution(List<string> list)
+        private double Solution(List<string> list)
         {
             List<string> symbols = new() { "+", "-", "*", "/"};
             List<string> brackets = new() { "(", ")" };
@@ -231,7 +231,7 @@ namespace Calculator
             }
             return numsStack.Pop();
         }
-        private static List<string> StringToList(string mathS)
+        private List<string> StringToList(string mathS)
         {
             List<char> symbols = new() { '*', '/', '+', '-' };
             List<char> brackets = new() { '(', ')' };
@@ -318,7 +318,7 @@ namespace Calculator
             return math;
         }
         
-        private static int Priority(string symbol)
+        private int Priority(string symbol)
         {
             switch (symbol)
             {

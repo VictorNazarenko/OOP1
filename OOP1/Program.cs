@@ -1,5 +1,4 @@
 ﻿using System;
-using Calculator;
 
 namespace OOP1
 {
@@ -7,10 +6,11 @@ namespace OOP1
     {
         static void Main()
         {
+            var calc = new Calculator.Calculator();
             
             try
             {
-                string str = Calculator.Calculator.Calculate("2*(-2)+3*(-1+3-10/2)+(2*(10/(2+3)))+1*(-1)");
+                string str = calc.Calculate(Console.ReadLine());
 
                 Console.WriteLine($"result: {str}");
             }
